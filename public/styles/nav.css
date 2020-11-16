@@ -1,0 +1,16 @@
+nav {
+  display: flex;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  height: 120px;
+  justify-content: space-between;
+}
+
+nav span {
+  margin: 1.5em;
+}
+
+nav .logo {
+  font-family: 'Bungee';
+}
+
