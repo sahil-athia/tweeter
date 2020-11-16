@@ -1,0 +1,35 @@
+.container button {
+  color: aliceblue;
+  font-family: 'Bungee';
+  background-color:  #4056A1;
+  border: none;
+  border-radius: 2px;
+  padding: 0.3em;
+}
+
+.container section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e2e1e1;
+  padding: 1em;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.tweet-line {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.3em;
+}
+
+#tweet-text {
+  border: none;
+  background-color:  #e2e1e1;
+  border-bottom: 5px solid #545149;
+  height: 1.5em;
+}
