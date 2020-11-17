@@ -4,6 +4,10 @@ nav {
   color: #FFFFFF;
   height: 120px;
   justify-content: space-between;
+  position: fixed; 
+  top: 0; 
+  width: 100%;
+
 }
 
 nav span {
@@ -12,5 +16,6 @@ nav span {
 
 nav .logo {
   font-family: 'Bungee';
+  font-size: xx-large;
 }
 
