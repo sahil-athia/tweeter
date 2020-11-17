@@ -24,6 +24,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/tweet-box.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
@@ -61,10 +62,13 @@
 
       <article class="tweet">
         <header>
-          <img src="https://www.jing.fm/clipimg/full/116-1168390_baidu-person-outline-comments-human-head-icon-png.png">
-          <span> <b>@example</b> </span>
+          <span>
+            <i class="far fa-user"> </i>
+            <i> Example Name</i>
+          </span>
+          <span class="user-handle"> <b>@example</b> </span>
         </header>
-        <p id="tweet-line"> example tweet</p>
+        <p id="tweet-line"><b>Example tweet</b></p>
         <footer>
           <span id="date">10 days ago</span>
           <span class="icons">
