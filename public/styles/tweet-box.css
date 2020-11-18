@@ -6,6 +6,17 @@ article.tweet {
   display: flex;
   flex-direction: column;
   width: 90%;
+  box-shadow: 0px 0px;
+}
+
+
+article.tweet:hover {
+  box-shadow: 10px 10px #4057a18f;
+
+}
+
+article.tweet:hover .user-handle {
+  color: #4057a18f;
 }
 
 article.tweet header {
@@ -17,6 +28,7 @@ article.tweet header {
 .user-handle {
   color: #4057a100;
 }
+
 
 article.tweet footer {
   display: flex;
@@ -30,7 +42,7 @@ article.tweet footer {
 .icons {
   color: #4056A1;
 }
-#tweet-line {
+.tweet-under-line {
   padding: 1em;
   padding-bottom: 1.5em;
   border-bottom: 5px solid #545149;

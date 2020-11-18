@@ -4,30 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
   
   
   const createTweetElement = (data) => {
@@ -41,7 +17,7 @@ $(document).ready(function() {
       </span>
       <span class="user-handle"> <b>${data.user.handle}</b> </span>
     </header>
-    <p id="tweet-line"><b>${data.content.text}</b></p>
+    <p class="tweet-under-line"><b>${data.content.text}</b></p>
     <footer>
       <span id="date">${date.toLocaleString()}</span>
       <span class="icons">
@@ -52,6 +28,7 @@ $(document).ready(function() {
     </footer>
     </article>
       `
+    console.log($tweet)
     return $tweet
   };
 
@@ -59,10 +36,15 @@ $(document).ready(function() {
   const renderTweets = (tweetData) => {
     for (const tweet of tweetData) {
       $tweet = createTweetElement(tweet)
-      $('.container').append($tweet);
+      $('.tweet-container').append($tweet);
     }
   }
 
+  const loadTweets = () => {
+    $.ajax('/tweets', {
+      method:'GET'
+    }).then(res => renderTweets(res))
+  }
 
   $('form').on('submit', event => {
     event.preventDefault()
@@ -73,6 +55,5 @@ $(document).ready(function() {
       data: $('form').serialize()
     }).then(res => console.log(res))
   })
-  
-  renderTweets(data);
+  loadTweets()
 });
