@@ -9,3 +9,7 @@ header.profile {
   color: aliceblue;
   margin-top: 120px;
 }
+
+header img {
+  margin-top: 1em;
+}

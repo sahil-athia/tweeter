@@ -31,7 +31,7 @@ $(document).ready(function() {
   
   
   const createTweetElement = (data) => {
-    const date = new Date(data.created_at * 1000)
+    const date = new Date(data.created_at)
     let $tweet = `
     <article class="tweet">
     <header>
@@ -43,7 +43,7 @@ $(document).ready(function() {
     </header>
     <p id="tweet-line"><b>${data.content.text}</b></p>
     <footer>
-      <span id="date">${date.toUTCString()}</span>
+      <span id="date">${date.toLocaleString()}</span>
       <span class="icons">
         <i class="fas fa-flag"></i>
         <i class="fas fa-retweet"></i>
@@ -62,6 +62,17 @@ $(document).ready(function() {
       $('.container').append($tweet);
     }
   }
+
+
+  $('form').on('submit', event => {
+    event.preventDefault()
+
+    $.ajax({
+      url: "/tweets",
+      method: "POST",
+      data: $('form').serialize()
+    }).then(res => console.log(res))
+  })
   
   renderTweets(data);
 });
