@@ -4,7 +4,11 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 const createTweetElement = (data) => {
   const date = new Date(data.created_at)
@@ -12,12 +16,12 @@ const createTweetElement = (data) => {
   <article class="tweet">
   <header>
     <span>
-      <img src="${data.user.avatars}">
-      <i> ${data.user.name}</i>
+      <img src="${escape(data.user.avatars)}">
+      <i> ${escape(data.user.name)}</i>
     </span>
-    <span class="user-handle"> <b>${data.user.handle}</b> </span>
+    <span class="user-handle"> <b>${escape(data.user.handle)}</b> </span>
   </header>
-  <p class="tweet-under-line"><b>${data.content.text}</b></p>
+  <p class="tweet-under-line"><b>${escape(data.content.text)}</b></p>
   <footer>
     <span id="date">${date.toLocaleString()}</span>
     <span class="icons">
@@ -58,6 +62,7 @@ const tweetValue = (input) => {
   return false;
 }
 
+
 $(document).ready(function() {
 
   $(".container").on("reload", loadTweets).trigger("reload");
@@ -69,12 +74,14 @@ $(document).ready(function() {
     const tweetLength = $(this).find('#tweet-text').val().length
 
     if (!tweetLength || !tweetValidity) {
-      alert('Please dont leave your tweet empty!')
+      $("#Slider").toggleClass("slidedown slideup");
+      $("#Slider").text('Your Tweet Should Not Be Empty')
     } else if (tweetLength > 140) {
-      alert('Your tweet is too long!')
+      $("#Slider").toggleClass("slidedown slideup");
+      $("#Slider").text('Your Tweet Is Too Long')
     } else {
+      $("#Slider").toggleClass("slidedown slideup");
       const data = $('form').serialize();
-
       $.ajax({
         url: "/tweets",
         method: "POST",
