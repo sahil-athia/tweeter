@@ -1,6 +1,5 @@
-.container button {
+.tweet-line > button {
   color: aliceblue;
-  font-family: 'Bungee';
   background-color:  #4056A1;
   border: none;
   border-radius: 2px;
@@ -8,22 +7,24 @@
 }
 
 .container section {
+  align-self: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #e2e1e1;
-  padding: 1em;
+  width: 81vw;
 }
 
-.container form {
+form {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 81vw;
+  margin: 1em;
 }
 
 .tweet-line {
   display: flex;
   justify-content: space-between;
+  font-family: 'Bungee';
   margin-top: 0.3em;
 }
 
@@ -32,4 +33,14 @@
   background-color:  #e2e1e1;
   border-bottom: 5px solid #545149;
   height: 1.5em;
+}
+
+@media only screen and (min-width: 1024px) {
+  .container section{
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
 }

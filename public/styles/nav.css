@@ -6,15 +6,24 @@ nav {
   justify-content: space-between;
   position: fixed; 
   top: 0; 
-  width: 100%;
+  width: 100vw;
 
 }
 
 nav span {
-  margin: 1.5em;
+  margin: 1em;
+  margin-bottom: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-nav .logo {
+.fa-chevron-down {
+  color: red;
+}
+
+.logo {
   font-family: 'Bungee';
   font-size: xx-large;
 }
