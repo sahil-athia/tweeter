@@ -7,7 +7,6 @@ nav {
   position: fixed; 
   top: 0; 
   width: 100vw;
-
 }
 
 nav span {
@@ -19,23 +18,68 @@ nav span {
   align-items: center;
 }
 
+.tweet-prompt > a {
+  font-size: 20px;
+}
+
 .fa-chevron-down {
   color: red;
 }
 
 .logo {
   font-family: 'Bungee';
-  font-size: xx-large;
+  font-size: x-large;
 }
 
+@media (min-width: 576px) {
+  nav {
+    background-color: #ffffff00;
+    position: absolute; 
+  }
+  
+  .tweet-prompt > a {
+    font-size: 20px;
+  }
+  
+}
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 768px) {
   .logo {
     font-size: x-large;
+  }
+
+  .tweet-prompt > a {
+    font-size: 25px;
   }
 
   nav {
     background-color: #ffffff00;
     position: absolute;
+    height: 120px;
   }
 }
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    display: flex;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    height: 120px;
+    justify-content: space-between;
+    position: fixed; 
+    top: 0; 
+    width: 100vw;
+  }
+
+  .logo {
+    font-size: xx-large;
+  }
+
+  .tweet-prompt > a {
+    font-size: 30px;
+  }
+}
+
+
+
+
