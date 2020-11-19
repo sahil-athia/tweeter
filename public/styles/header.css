@@ -16,11 +16,18 @@ header > div > img {
   margin-top: 1em;
 }
 
+
 @media only screen and (min-width: 1024px) {
   header.profile {
     margin-left: 2em;
     margin-top: 160px;
     width: 40%;
-    height: 40%;
+    
     }
+}
+
+@media only screen and (max-width: 768px) {
+  header.profile {
+    margin-top: 0px;
+  }
 }

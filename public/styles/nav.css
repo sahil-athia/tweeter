@@ -28,3 +28,14 @@ nav span {
   font-size: xx-large;
 }
 
+
+@media only screen and (max-width: 768px) {
+  .logo {
+    font-size: x-large;
+  }
+
+  nav {
+    background-color: #ffffff00;
+    position: absolute;
+  }
+}
