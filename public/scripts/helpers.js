@@ -3,11 +3,11 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 const createTweetElement = (data) => {
   // create a template article for each new tweet
-  const date = new Date(data.created_at)
+  const date = new Date(data.created_at);
   let $tweet = `
   <article class="tweet">
     <header>
@@ -27,8 +27,8 @@ const createTweetElement = (data) => {
       </span>
     </footer>
   </article>
-    `
-  return $tweet
+    `;
+  return $tweet;
 };
 
 const renderTweets = (tweetData) => {
@@ -38,7 +38,7 @@ const renderTweets = (tweetData) => {
     const $tweet = createTweetElement(tweet);
     $('.tweet-container').prepend($tweet);
   }
-}
+};
 
 const loadTweets = () => {
   // use an ajax request to get the information on tweets from the database
@@ -48,15 +48,15 @@ const loadTweets = () => {
     $('.tweet-container').empty();
     renderTweets(res);
   })
-}
+};
 
 const tweetValue = (input) => {
   // returns true if a tweet contains all spaces
   let string = $(input).find('#tweet-text').val();
-  for (const char of string){
-    if (char !== " "){
+  for (const char of string) {
+    if (char !== " ") {
       return true;
     }
   }
   return false;
-}
+};
