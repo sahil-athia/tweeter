@@ -67,26 +67,26 @@ $(document).ready(function() {
 
   $(".container").on("reload", loadTweets).trigger("reload");
   // once there is a reload, we call loadTweets
-
+  $('#slider').hide();
   $('form').on('submit', event => {
     event.preventDefault()
     const tweetValidity = tweetValue(this)
     const tweetLength = $(this).find('#tweet-text').val().length
 
     if (!tweetLength || !tweetValidity) {
-      $("#Slider").toggleClass("slidedown slideup");
-      $("#Slider").text('Your Tweet Should Not Be Empty')
+      $("#error-message").text('Your Tweet Should Not Be Empty');
+      $('#slider').slideDown('slow');
     } else if (tweetLength > 140) {
-      $("#Slider").toggleClass("slidedown slideup");
-      $("#Slider").text('Your Tweet Is Too Long')
+      $("#error-message").text('Your Tweet Is Too Long');
+      $('#slider').slideDown('slow');
     } else {
-      $("#Slider").toggleClass("slidedown slideup");
       const data = $('form').serialize();
       $.ajax({
         url: "/tweets",
         method: "POST",
         data,
       }).done(function() {
+        $('#slider').slideUp('slow');
         $(".container").trigger("reload");
       })
     }
