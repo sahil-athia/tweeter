@@ -34,7 +34,7 @@ article.tweet header {
 }
 
 .user-handle {
-  color: #4057a100;
+  color: #4057a18f;
 }
 
 
@@ -58,15 +58,12 @@ article.tweet footer {
 
 /* responsive desgin */
 
-@media only screen and (min-width: 768px) {
-  .user-handle {
-    color: #4057a18f;
-  }
-}
-
 @media only screen and (min-width: 1024px) {
   article.tweet {
     width: 90%;
+  }
+  .user-handle {
+    color: #4057a100;
   }
 }
 
