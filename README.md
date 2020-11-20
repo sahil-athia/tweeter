@@ -8,21 +8,22 @@ This application is built with **HTML**, **CSS**, **JS**, **jQuery** and **AJAX*
 
 ## Final Product
 
+\*Tweet Page\*
 !["tweet-page"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-page.png?raw=true)
 
-
+\*Tweet Page on Tablet\*
 !["tweet-page-tablet"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-page-tablet.png?raw=true)
 
-
+\*Tweet Page on Mobile\*
 !["tweet-page-mobile"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-page-mobile.png?raw=true)
 
-
+\*Error Handling\*
 !["tweet-errors"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-errors.png?raw=true)
 
-
+\*On Hover Animation\*
 !["tweet-animations"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-animations.png?raw=true)
 
-
+\*Tweet Form\*
 !["tweet-input"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-input.png?raw=true)
 
 
