@@ -1,5 +1,5 @@
 .tweet-line > button {
-  color: aliceblue;
+  color: #ffffff;
   background-color:  #4056A1;
   border: none;
   border-radius: 2px;
@@ -30,10 +30,12 @@ form {
 
 #tweet-text {
   border: none;
-  background-color:  #e2e1e1;
+  background-color:  #f4f1ec;
   border-bottom: 5px solid #545149;
   height: 1.5em;
 }
+
+/* responsive desgin */
 
 @media only screen and (min-width: 1024px) {
   .container section{

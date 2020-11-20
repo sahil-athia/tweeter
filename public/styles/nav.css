@@ -31,7 +31,9 @@ nav span {
   font-size: x-large;
 }
 
-@media (min-width: 576px) {
+/* responsive desgin */
+
+@media only screen and (min-width: 576px) {
   nav {
     background-color: #ffffff00;
     position: absolute; 
