@@ -2,7 +2,29 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+The application will diplay a chronological list of *tweets* made by the user.
+
+This application is built with **HTML**, **CSS**, **JS**, **jQuery** and **AJAX** on the front-end, and **Node**, **Express** and **MongoDB** on the back-end.
+
+## Final Product
+
+!["tweet-page"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-page.png?raw=true)
+
+
+!["tweet-page-tablet"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-page-tablet.png?raw=true)
+
+
+!["tweet-page-mobile"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-page-mobile.png?raw=true)
+
+
+!["tweet-errors"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-errors.png?raw=true)
+
+
+!["tweet-animations"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-animations.png?raw=true)
+
+
+!["tweet-input"](https://github.com/sahil-athia/tweeter/blob/master/docs/tweet-input.png?raw=true)
+
 
 ## Getting Started
 
@@ -14,4 +36,6 @@ This repository is the starter code for the project: Students will fork and clon
 ## Dependencies
 
 - Express
+- Body Parser
+- Chance
 - Node 5.10.x or above
