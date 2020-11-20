@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('.counter').text(140);
-
+  // set dafault text in counter to 140
+  
   $('#tweet-text').on('input', function() {
     let chars = 140;
     const inputLength = chars - this.value.length;
