@@ -2,6 +2,11 @@ $(document).ready(function() {
   $(".container").on("reload", loadTweets).trigger("reload");
   // once there is a reload, we call loadTweets, initial trigger at sucessful submit
 
+  $(".toggle-box").on("click", function() {
+    console.log("helo")
+    alert("hello")
+  });
+
   $('#slider').hide();
   // hide the error bar once page loads to avoid showing the red borders
 
@@ -22,7 +27,6 @@ $(document).ready(function() {
 
     } else {
       let tweet = tweetBreaker($(this).find('#tweet-text').val())
-      console.log(tweet)
       const data = $('form').serialize();
       $.ajax({
         url: "/tweets",

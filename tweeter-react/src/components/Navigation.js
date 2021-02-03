@@ -8,7 +8,7 @@ export const Navigation = () => {
       <span className="logo">tweeter</span>
       <span className="tweet-prompt">
         <a><b>Write</b> a new tweet</a>
-        <i className="fas fa-chevron-down"></i>
+        <i className="fas fa-chevron-down toggle-box"></i>
       </span>
     </nav>
   )
