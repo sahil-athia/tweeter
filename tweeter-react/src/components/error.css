@@ -1,0 +1,9 @@
+#slider {
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+  margin-top: 0.5em;
+  color: red;
+  border: 5px solid red;
+  width: 90%;
+}

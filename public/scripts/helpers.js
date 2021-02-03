@@ -9,7 +9,7 @@ const createTweetElement = (data) => {
   // create a template article for each new tweet
   const date = new Date(data.created_at);
   let $tweet = `
-  <article class="tweet">
+  <article class="tweet"> 
     <header>
       <span>
         <img src="${escape(data.user.avatars)}">
@@ -60,3 +60,22 @@ const tweetValue = (input) => {
   }
   return false;
 };
+
+const tweetBreaker = (tweet) => {
+  let string = "";
+  let talley = 0;
+
+  for (const char of tweet) {
+    string += char
+    if (char !== ' ') {
+      talley ++;
+    } else {
+      talley = 0;
+    }
+    if (talley >= 50) {
+      string += " "
+      talley = 0;
+    }
+  }
+  return string;
+}

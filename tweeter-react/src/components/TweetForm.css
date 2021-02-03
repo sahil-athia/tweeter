@@ -1,0 +1,48 @@
+.tweet-line > button {
+  color: #ffffff;
+  background-color:  #4056A1;
+  border: none;
+  border-radius: 2px;
+  padding: 0.3em;
+}
+
+.container section {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 81vw;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 81vw;
+  margin: 1em;
+}
+
+.tweet-line {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee';
+  margin-top: 0.3em;
+}
+
+#tweet-text {
+  border: none;
+  background-color:  #f4f1ec;
+  border-bottom: 5px solid #545149;
+  height: 1.5em;
+}
+/* e*/
+/* responsive desgin */
+
+@media only screen and (min-width: 1024px) {
+  .container section{
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}

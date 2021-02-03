@@ -21,6 +21,8 @@ $(document).ready(function() {
       $('#slider').slideDown('slow');
 
     } else {
+      let tweet = tweetBreaker($(this).find('#tweet-text').val())
+      console.log(tweet)
       const data = $('form').serialize();
       $.ajax({
         url: "/tweets",

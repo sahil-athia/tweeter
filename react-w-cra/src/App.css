@@ -1,0 +1,9 @@
+.App {
+  text-align: center;
+  background-color: rgb(190, 190, 255);
+}
+
+/* since this is css, we no longer so the camelCase */
+#niceButton {
+  border: 5px solid blue;
+}
