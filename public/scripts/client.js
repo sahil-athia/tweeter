@@ -3,8 +3,11 @@ $(document).ready(function() {
   // once there is a reload, we call loadTweets, initial trigger at sucessful submit
 
   $(".toggle-box").on("click", function() {
-    console.log("helo")
-    alert("hello")
+    if ($(".new-tweet").is(":hidden")) {
+      $('.new-tweet').slideDown('slow');
+    } else {
+      $('.new-tweet').slideUp('slow');
+    }
   });
 
   $('#slider').hide();
